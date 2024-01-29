@@ -1,3 +1,0 @@
-NOTA:
-
-Falta automatizar scraper.

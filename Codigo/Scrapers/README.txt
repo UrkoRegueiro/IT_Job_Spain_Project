@@ -1,1 +1,1 @@
-Scrapers para los diferentes portales de empleo
+Notebook automatizado para la extracción de datos en los diferentes portales de empleo.

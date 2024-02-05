@@ -1,0 +1,16 @@
+{
+  ".*completa.*": "jornada completa",
+  ".*intensiva.*ma\u00f1ana.*": "jornada intensiva de ma\u00f1ana",
+  ".*parcial.*ma\u00f1ana.*": "jornada parcial de ma\u00f1ana",
+  ".*media.*": "media jornada",
+  ".*parcial.*indiferente.*": "jornada parcial indiferente",
+  ".*practicas.*": "practicas",
+  ".*indiferente.*": "jornada indiferente",
+  ".*por horas.*": "por horas",
+  ".*obra.*": "contrato por obra",
+  ".*temporal.*": "contrato temporal",
+  ".*autonomo.*": "trabajo autonomo",
+  ".*rotatorio.*": "turno rotatorio",
+  ".*tarde.*": "jornada de tarde",
+  ".*estudiantes.*": "trabajo para estudiantes"
+}

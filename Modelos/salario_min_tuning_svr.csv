@@ -1,0 +1,2 @@
+,Nombre,Modelo,Parametros,r2_score,MAE,MSE
+0,SVR,"SVR(C=0.2, cache_size=100, coef0=-0.5, epsilon=0.01, max_iter=600, tol=1e-06)","{'C': 0.2, 'cache_size': 100, 'coef0': -0.5, 'degree': 3, 'epsilon': 0.01, 'gamma': 'scale', 'kernel': 'rbf', 'max_iter': 600, 'shrinking': True, 'tol': 1e-06, 'verbose': False}",0.4501016012707174,0.17247806108127844,0.050469305774353296

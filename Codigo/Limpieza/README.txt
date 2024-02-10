@@ -1,1 +1,0 @@
-Función y automatización de recolección y limpieza de datos

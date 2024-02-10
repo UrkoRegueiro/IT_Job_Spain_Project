@@ -1,0 +1,14 @@
+{
+  ".*indefinido.*": "indefinido",
+  ".*discontinuo.*": "indefinido",
+  ".*temporal.*": "temporal",
+  ".*determinada.*": "temporal",
+  ".*determinar.*": "temporal",
+  ".*practicas.*": "practicas",
+  ".*formativo.*": "practicas",
+  ".*autonomo.*": "autonomo",
+  ".*otros contratos.*": "otros contratos",
+  ".*obra.*servicio.*": "obra o servicio",
+  ".*parcial.*": "parcial",
+  ".*relevo.*": "relevo"
+}

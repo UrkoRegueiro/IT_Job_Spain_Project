@@ -1,4 +1,0 @@
-pandas
-folium
-streamlit
-streamlit_folium

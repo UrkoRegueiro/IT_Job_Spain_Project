@@ -1,3 +1,4 @@
+
 ################ Librerias ################
 import os
 import pandas as pd
@@ -66,4 +67,5 @@ def data_transformer(X, ruta_encoders, ruta_modelos):
     X_pca_max = pca_max.transform(X)
 
     return X_pca_min, X_pca_max
+
 ############################################################################################################

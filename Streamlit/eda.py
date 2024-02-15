@@ -1,3 +1,4 @@
+
 ################ Funciones #################
 import streamlit_folium
 
@@ -326,20 +327,6 @@ def eda():
                                           )
         grafico_beneficios.update_traces(text=text, texttemplate='%{text}', textfont=dict(color='black'))
         st.plotly_chart(grafico_beneficios)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

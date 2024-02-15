@@ -107,7 +107,12 @@
                 "portal"
             ],
             "dic_datos": {
-                "nuevas": true
+                "opcion": "fechapublicacion3",
+                "opciones_fechas_publicacion": [
+                    "fechapublicacion1",
+                    "fechapublicacion2",
+                    "fechapublicacion3"
+                ]
             }
         },
         "talenthacker": {

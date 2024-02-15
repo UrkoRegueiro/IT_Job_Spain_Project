@@ -1,23 +1,19 @@
+
 ################ Librerias ################
 import os
 import pandas as pd
 import numpy as np
 import pickle
 import json
-from joblib import dump, load
-import sklearn
-############################################################################################################
-#################################### Función de carga de datos #############################################
-def read_data(ruta):
-    df = pd.read_csv(filepath_or_buffer=ruta)
-
-    return df
+import streamlit as st
+from joblib import load
 ############################################################################################################
 #################################### Función de carga de modelos ###########################################
-def load_model(ruta):
-
-    min_model = load(ruta + '\min_model.pkl')
-    max_model = load(ruta + '\max_model.pkl')
+@st.cache_resource
+def load_model():
+    ruta_modelos = os.getcwd().replace("Streamlit", "Modelo_predictivo\\trained_models")
+    min_model = load(ruta_modelos + '\min_model.pkl')
+    max_model = load(ruta_modelos + '\max_model.pkl')
 
     return min_model, max_model
 ############################################################################################################
@@ -71,4 +67,5 @@ def data_transformer(X, ruta_encoders, ruta_modelos):
     X_pca_max = pca_max.transform(X)
 
     return X_pca_min, X_pca_max
+
 ############################################################################################################

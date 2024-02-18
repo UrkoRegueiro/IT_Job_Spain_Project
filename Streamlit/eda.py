@@ -1,3 +1,4 @@
+
 ################ Funciones #################
 import matplotlib.pyplot as plt
 import streamlit
@@ -331,6 +332,7 @@ def eda():
             df_empresas_top_15 = df_empresas[df_empresas['empresa'].isin(top_15_empresas.index)]
             df_empresas_top_15['total'] = 1
             mask_empleo = df_empresas_top_15['categoria_empleo'] != 'otros'
+
 
             graf_empresas_top = px.treemap(df_empresas_top_15[mask_empleo],
                              values="total",

@@ -1,3 +1,4 @@
+
 ################ Funciones #################
 import streamlit
 
@@ -169,6 +170,5 @@ def modelo():
 
 if __name__ == "__modelo__":
     modelo()
-
 
 

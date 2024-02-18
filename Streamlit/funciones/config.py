@@ -1,3 +1,4 @@
+
 PAGE_CONFIG = {"page_title"           : "Applica Tech",
                "page_icon"            : None,
                "layout"               : "wide",
@@ -6,4 +7,3 @@ PAGE_CONFIG = {"page_title"           : "Applica Tech",
                                          'Report a bug': "https://www.extremelycoolapp.com/bug",
                                          'About': "# This is a header. This is an *extremely* cool app!"
                                         }
-               }

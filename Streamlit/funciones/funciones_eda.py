@@ -19,7 +19,8 @@ import plotly.express as px
 import plotly.graph_objs as go
 import math
 from math import pi
-
+from plotly.subplots import make_subplots
+import joypy
 ############################################################################################################
 #################################### Función de carga de datos #############################################
 
@@ -35,7 +36,11 @@ def load_data():
     with open(ruta_datos + "provincias_esp_choro.geojson", 'r') as archivo:
         provincias_geojson = json.load(archivo)
 
-    return geo_spain, df, df_comunidades, df_herramientas, provincias_geojson, df_spider, df_spider_sin_ingles
+    df_salarios = pd.read_csv(ruta_datos + 'salarios_comparacion.csv')
+    df_salario_medio = pd.read_csv(ruta_datos + 'salario_medio_comunidades.csv')
+    df_stack = pd.read_csv(ruta_datos + 'stack_tecnologico.csv')
+    df_grafico = pd.read_csv(ruta_datos + 'df_grafico.csv')
+    return geo_spain, df, df_comunidades, df_herramientas, provincias_geojson, df_spider, df_spider_sin_ingles, df_salarios, df_salario_medio, df_stack, df_grafico
 
 
 ############################################################################################################
@@ -47,3 +52,14 @@ def metodo_tukey(df, columna, alfa):
     df = df[df[columna].between(q1 - alfa * riq, q3 + alfa * riq) | (df[columna].isna())]
 
     return df
+
+def intervalo_experiencia(experiencia):
+    if experiencia <= 1:
+        return 'Junior'
+    elif experiencia <= 4:
+        return 'Mid'
+    elif experiencia <= 7:
+        return 'Senior'
+    elif experiencia <= 10:
+        return 'Lead'
+    return np.nan

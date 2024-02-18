@@ -4,16 +4,26 @@ from funciones.funciones_eda import *
 
 ############################################
 
-
 def tech_app():
-
+    st.markdown("""
+        <style>
+        .big-font {
+            font-size:20px;
+        }
+        </style>
+        """, unsafe_allow_html=True)
     ################ DATOS #########################
-    geo_spain, _, _, _, _, _, _ = load_data()
+    geo_spain, _, _, _, _, _, _, _, _, _,_ = load_data()
     ################################################
 
     ################ TITULO ########################
-    st.markdown("<h1 style='text-align: center; font-size: 3em;'>Applica Tech</h1>", unsafe_allow_html=True)
-    ################################################
+    st.markdown("<h1 style='text-align: center;color: orange; font-size: 3em;'>Un viaje por el mercado Tech español</h1>", unsafe_allow_html=True)
+
+    st.markdown('' '<p class="big-font">'
+                'Bienvenidos a la web donde podrás descubrir y sumergirte en el mercado tech, partiendo desde lo general hasta sus particularidades.'
+                ''
+                '</p>''', unsafe_allow_html=True)
+
 
     ################ GRÁFICO #######################
 
@@ -26,43 +36,24 @@ def tech_app():
         pickable=True,
         elevation_range=[0, 1000],
         extruded=True,
-        coverage=1,
+        coverage=2,
         radius=3000,
     )
 
+    width = st.sidebar.slider("plot width", 100, 1000, 10)
+    height = st.sidebar.slider("plot height", 100, 1000, 10)
     # Configurar la vista del mapa
     view_state = pdk.ViewState(
-        longitude=-1.979444,
-        latitude=40.223611,
+        longitude=-4,
+        latitude=41,
         zoom=1,
-        min_zoom=5,
+        min_zoom=4,
         max_zoom=7,
-        pitch=40,
-        bearing=-10)
+        pitch=25,
+        bearing=-10, height=420)
 
     st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state))
     ################################################
-
-    ########## INTRODUCCIÓN ########################
-    st.subheader(body="Inicio")
-
-    st.write("Bienvenidos a la web donde podrás explorar el mercado laboral tech español.")
-
-    st.markdown("""The data for this project comes from the following website: 
-                    [Open Canada](https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64).""")
-
-    # Cuando pongo las comillas se pone el texto en verde
-    st.write("""To use this app just go to the `Exploratory Data Analysis` section to know more about the data that we used to build
-                the Machine Learning models.""")
-
-    st.write(
-        """To use the `Machine Learning Model` section you can either use the sliders in the sidebar or upload you own CSV file.""")
-
-    st.warning(""" CARGAR LOS DATOS PARA HACER UN MAPA DE RELIEVE """)
-
-    st.write("""poner mapa y explicación""")
-    ################################################
-
 
 
 

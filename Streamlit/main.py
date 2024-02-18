@@ -9,6 +9,7 @@ from tech_job_app import *
 from eda import eda
 from modelo import modelo
 from comparador import compara
+from acercade import info
 
 ############################################
 st.set_page_config(**PAGE_CONFIG)
@@ -16,14 +17,13 @@ st.set_page_config(**PAGE_CONFIG)
 page_gb_img = """
 <style>
 [data-testid="stSidebar"] {
-background-image: url("https://media.istockphoto.com/id/1419766496/es/foto/conceptos-abstractos-de-tecnolog%C3%ADa-de-ciberseguridad-y-protecci%C3%B3n-de-datos-digitales-proteja.jpg?b=1&s=612x612&w=0&k=20&c=j7sNmdnPqw2W4gcoi5IMMmySvleVV8n-d-gPv0_1Gnw=");
+background-image: url("https://evelazco.com/wp-content/uploads/2024/02/bg45-jpg.webp");
 background-size: cover;
 }
 
 [data-testid="stAppViewBlockContainer"] {
 background-color: #111111;
 }
-
 
 [data-testid="stHeader"] {
 background-color: #202020;
@@ -43,19 +43,21 @@ st.markdown(page_gb_img, unsafe_allow_html=True)
 def main():
 
 
-    menu = ["Inicio", "Explora el mercado", "Comparador", "Predictor Salarial", "Acerca de"]
+    menu = ["Inicio", "Una visión general", "Explora el mercado", "Predictor Salarial", "Acerca de"]
     default_index = 0
 
     # Crea el menú
     with st.sidebar:
         selected_option = option_menu("Menu", menu,
-    icons=['rocket-takeoff', 'bar-chart-line-fill', "intersect","robot", 'heart-fill'],
+    icons=['rocket-takeoff', 'bar-chart-line-fill', "search-heart","robot", 'heart-fill'],
     menu_icon="house", default_index=0, orientation="vertical",
     styles={
-        "container": {"padding": "0!important", "background-color": "#39393D"},
+        "menu": {"background": "transparent!important"},
+        "container": {"padding": "0!important", "background-color": "#39393D", "border-radius":"20px"},
         "icon": {"color": "orange", "font-size": "25px"},
-        "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
-        "nav-link-selected": {"background-color": "grey"},
+        "nav-link": {"font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "rgba(110,110,110,1.00)"},
+        "nav-link-selected": {"background-color": "rgba(110,110,110,1.00)"},
+        "menu-title": {"padding-top": ".5rem !important"}
     })
 
 
@@ -66,13 +68,13 @@ def main():
 
         pass
 
-    elif selected_option == "Explora el mercado":
+    elif selected_option == "Una visión general":
 
         eda()
 
         pass
 
-    elif selected_option == "Comparador":
+    elif selected_option == "Explora el mercado":
 
         compara()
 
@@ -86,7 +88,7 @@ def main():
 
     else:
 
-        #info()
+        info()
 
         pass
 

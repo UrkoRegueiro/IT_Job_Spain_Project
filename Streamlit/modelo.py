@@ -21,7 +21,7 @@ def modelo():
         <style>
         .center-font {
             font-size:25px;
-            color: #FAA227;
+            color: orange;
             text-align: center;
         }
         </style>
@@ -29,7 +29,7 @@ def modelo():
 
     st.markdown('<p class="big-font">Una de las preguntas más frecuentes que podemos hacernos a la hora de aplicar a una oferta laboral es la siguiente:</p>', unsafe_allow_html=True)
     st.markdown('<p class="center-font">¿Cuál es el rango salarial que puedo negociar?</p>', unsafe_allow_html=True)
-    st.markdown('<p class="big-font">Es por ello que ponemos a tu disposición en este apartado una herramienta que ofrece una estimación del rango salarial bruto anual en base a tus habilidades y preferencias. Esta herramienta está construida sobre dos modelo de machine learning entrenados con nuestra base de datos de empleos en España, más en concreto se trata de dos SVR(Suport Vector Regressor), cada uno entrenado para predecir el salario mínimo y máximo respectivamente.</p>', unsafe_allow_html=True)
+    st.markdown('<p class="big-font">Es por ello que ponemos a tu disposición una herramienta que ofrece una estimación del rango salarial bruto anual en base a tus habilidades y preferencias. Esta herramienta está construida sobre dos modelo de machine learning entrenados con nuestra base de datos de empleos en España, más en concreto se trata de dos SVR(Suport Vector Regressor), cada uno entrenado para predecir el salario mínimo y máximo respectivamente.</p>', unsafe_allow_html=True)
     st.markdown('<p class="big-font">Presentados a los protagonistas, pongámoslos a trabajar.</p>', unsafe_allow_html=True)
     st.markdown('<p class="big-font">A continuación deberás elegir las opciones que se presentan y presionar el botón de predicción, obteniendo tu rango salarial estimado.</p>', unsafe_allow_html=True)
 
@@ -83,6 +83,9 @@ def modelo():
                                        options = contrato,
                                        index   = None)
 
+
+
+
     experiencia_selected = st.slider(label     = "Experiencia laboral",
                                      min_value = int(min(experiencia)),
                                      max_value = int(max(experiencia)),
@@ -91,15 +94,19 @@ def modelo():
     st.markdown("")
     st.markdown("")
 
-    herramientas_selected = st.multiselect(label   = "Herramientas",
+    col_1, col_2 = st.columns((3.2,1), gap="large")
+
+    herramientas_selected = col_1.multiselect(label   = "Herramientas",
                                            options = herramientas,
                                            default = None,
                                            max_selections=5)
 
     st.markdown("")
     st.markdown("")
+    col_2.markdown("")
+    col_2.markdown("")
+    if col_2.toggle(label="Con beneficios"):
 
-    if st.toggle(label="Con beneficios"):
         beneficios_selected = 1
 
     #beneficios_selected = (st.selectbox("Beneficios", options=["Sin beneficios", "Con beneficios"], key= "botton_bool"))

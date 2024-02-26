@@ -1,1 +1,0 @@
-Notebook automatizado para la extracción de datos en los diferentes portales de empleo.

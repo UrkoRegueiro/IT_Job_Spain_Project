@@ -6,7 +6,7 @@
 
 <div align="center">
 
-  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVHsPOPK4qAv--U-1cDaE4Y9W7LXPuJ7mINA&usqp=CAU" alt="Loan Default Risk Prediction" width="40%">
+  <img src="https://github.com/UrkoRegueiro/IT_Job_Spain_Project/blob/main/Datos/Procesados/divider.png" alt="IT_Jobs" width="100%">
   
 </div>
 
@@ -35,4 +35,16 @@ Queremos destacar que este proyecto no solo es una iniciativa informativa, sino 
 
 ## 2. **Extracción, Transformación y Carga de datos**<br>
 
+El proceso de extracción puede encontrarse en la carpeta [Scrapers](https://github.com/UrkoRegueiro/IT_Job_Spain_Project/tree/main/Codigo/Scrapers). Aquí se pone a disposición el código que ha hecho posible la obtención de todos nuestros datos.
+
+A su vez el código del proceso de transformación y limpieza de datos lo encontramos diponible en la carpeta [Limpieza](https://github.com/UrkoRegueiro/IT_Job_Spain_Project/tree/main/Codigo/Limpieza)
+
 ## 3. **Análisis Exploratorio de Datos**<br>
+
+Este análisis puede encontrarse en la carpeta [EDA](https://github.com/UrkoRegueiro/IT_Job_Spain_Project/tree/main/Codigo/EDA). Aquí se podrá explorar más a fondo todas las relaciones encontradas en nuestros datos. Debido al gran tamaño del notebook es necesario su descarga para su visualización.
+
+## 4. **Modelización**<br>
+
+En esta sección ponemos a tu disposición el código implementado para los modelos de machine learning entrenados con nuestra base de datos de empleos en España. En concreto se trata de dos SVR(Suport Vector Regression), cada uno entrenado para predecir el salario mínimo y máximo respectivamente.
+
+En la carpeta [Modelo_predictivo](https://github.com/UrkoRegueiro/IT_Job_Spain_Project/tree/main/Modelo_predictivo) encontrarás todo el proceso de construcción.

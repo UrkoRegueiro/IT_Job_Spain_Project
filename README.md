@@ -48,3 +48,7 @@ Este análisis puede encontrarse en la carpeta [EDA](https://github.com/UrkoRegu
 En esta sección ponemos a tu disposición el código implementado para los modelos de machine learning entrenados con nuestra base de datos de empleos en España. En concreto se trata de dos SVR(Suport Vector Regression), cada uno entrenado para predecir el salario mínimo y máximo respectivamente.
 
 En la carpeta [Modelo_predictivo](https://github.com/UrkoRegueiro/IT_Job_Spain_Project/tree/main/Modelo_predictivo) encontrarás todo el proceso de construcción.
+
+## 4. **Deploy**<br>
+
+Para visualizar el código que ha hecho posible montar la web a traves de Streamlit pueden acceder al repositorio [Applicatech](https://github.com/UrkoRegueiro/applicatech).
